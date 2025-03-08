@@ -1,0 +1,24 @@
+{
+    "name": "Hugo + Tailwind Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            },
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "streetsidesoftware.code-spell-checker",
+                "golang.go"
+            ]
+        }
+    },
+    "postCreateCommand": "npm install --no-save && hugo version",
+    "forwardPorts": [1313],  
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspaces/hugo-tailwind,type=bind"
+    ],
+    "remoteUser": "vscode"
+}
