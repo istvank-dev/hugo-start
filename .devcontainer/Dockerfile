@@ -11,10 +11,12 @@ RUN apt-get update && apt-get install -y \
 #RUN curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64 \
 #    && chmod +x tailwindcss-linux-x64 \
 #    && mv tailwindcss-linux-x64 /usr/local/bin/tailwindcss
+
+# Install tailwindcss with cli globally
 RUN npm install -g tailwindcss @tailwindcss/cli
 
 # Set the working directory
-WORKDIR /workspace
+WORKDIR /workspace/hugo-start
 
 # Create vscode user with a home directory
 RUN useradd -m vscode

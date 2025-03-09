@@ -9,16 +9,11 @@
                 "terminal.integrated.defaultProfile.linux": "bash"
             },
             "extensions": [
-                "esbenp.prettier-vscode",
-                "streetsidesoftware.code-spell-checker",
                 "golang.go"
             ]
         }
     },
-    "postCreateCommand": "node -v && npm -v && hugo version",
-    "forwardPorts": [1313],  
-    "mounts": [
-        "source=${localWorkspaceFolder},target=/workspaces/hugo-tailwind,type=bind"
-    ],
+    //"postCreateCommand": "node -v && npm -v && hugo version",
+    "forwardPorts": [1313],
     "remoteUser": "vscode"
 }
