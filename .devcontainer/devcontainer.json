@@ -15,7 +15,7 @@
             ]
         }
     },
-    "postCreateCommand": "npm install --no-save && hugo version",
+    "postCreateCommand": "node -v && npm -v && hugo version",
     "forwardPorts": [1313],  
     "mounts": [
         "source=${localWorkspaceFolder},target=/workspaces/hugo-tailwind,type=bind"
